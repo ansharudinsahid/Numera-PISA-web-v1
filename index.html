@@ -17,7 +17,7 @@
     <!-- Navigasi -->
     <header id="navbar">
         <div class="nav-container">
-            <div class="logo">
+            <div class="logo" id="nav-logo" role="button" tabindex="0" title="Kembali ke Beranda">
                 <div class="logo-icon"><i class="ph ph-hexagon"></i></div>
                 <span class="logo-text">Numera PISA</span>
             </div>
@@ -29,11 +29,41 @@
                 <a href="#" id="nav-tim"><i class="ph ph-users"></i> Tim Pengembang</a>
             </nav>
 
-            <button class="btn-primary">
-                <i class="ph ph-cube"></i> Simulator 3D
-            </button>
+            <div class="nav-actions">
+                <button class="btn-primary" id="btn-header-simulator">
+                    <i class="ph ph-cube"></i> Simulator 3D
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                    <i class="ph ph-list" id="mobile-toggle-icon"></i>
+                </button>
+            </div>
         </div>
     </header>
+
+    <!-- Mobile Navigation Drawer & Backdrop -->
+    <div class="mobile-menu-backdrop" id="mobile-menu-backdrop"></div>
+    <div class="mobile-menu-drawer" id="mobile-menu-drawer">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <div class="logo-icon"><i class="ph ph-hexagon"></i></div>
+                <span class="logo-text">Numera PISA</span>
+            </div>
+            <button class="btn-close-mobile-menu" id="btn-close-mobile-menu" aria-label="Tutup Menu">
+                <i class="ph ph-x"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav-links">
+            <a href="#" id="mobile-nav-beranda" class="active"><i class="ph ph-compass"></i> Beranda</a>
+            <a href="#" id="mobile-nav-materi"><i class="ph ph-book-open"></i> Materi Pembelajaran</a>
+            <a href="#" id="mobile-nav-bahan-ajar"><i class="ph ph-file-text"></i> Bahan Ajar Digital</a>
+            <a href="#" id="mobile-nav-tim"><i class="ph ph-users"></i> Tim Pengembang</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <button class="btn-primary" id="btn-mobile-simulator" style="width: 100%; justify-content: center;">
+                <i class="ph ph-cube"></i> Buka Simulator 3D
+            </button>
+        </div>
+    </div>
 
     <main>
         <!-- ========================================== -->
@@ -57,7 +87,7 @@
                                 </a>
                             </div>
                             <div class="hero-buttons-row">
-                                <a href="#" class="btn-hero btn-dark">
+                                <a href="#" class="btn-hero btn-dark btn-open-simulator">
                                     <i class="ph ph-cube"></i> Simulasi WebAR 3D
                                 </a>
                             </div>
@@ -71,7 +101,7 @@
                             <h3>Simulasi Kubus & Polihedron</h3>
                             <p>Visualisasi 3D interaktif &bull; Analisis jaring-jaring &bull; Proyeksi WebXR</p>
                             <div class="simulator-link">
-                                <a href="#">Buka Simulator <i class="ph ph-caret-right"></i></a>
+                                <a href="#" class="btn-open-simulator">Buka Simulator <i class="ph ph-caret-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -97,7 +127,7 @@
                         </ul>
                     </div>
 
-                    <div class="card cursor-pointer">
+                    <div class="card cursor-pointer btn-open-simulator">
                         <div class="card-icon"><i class="ph ph-device-mobile"></i></div>
                         <span class="card-subtitle">PILAR II</span>
                         <h3>Media Interaktif WebAR 3D</h3>
@@ -160,7 +190,7 @@
         <!-- HALAMAN MATERI (Tersembunyi secara default)-->
         <!-- ========================================== -->
         <div id="page-materi" class="page-section d-none">
-            <section class="section-container" style="padding-top: 8rem;">
+            <section class="section-container page-top-spacing">
                 
                 <div class="materi-header">
                     <h2>Materi Pembelajaran PISA, Numerasi & WebAR</h2>
@@ -297,18 +327,18 @@
                             </div>
                             <div class="table-row">
                                 <div class="col-aspek font-bold">Fokus Utama</div>
-                                <div class="col-murni">Teori abstrak, pembuktian aksiomatis, manipulasi rumus aljabar murni.</div>
-                                <div class="col-numerasi">Pengambilan keputusan berbasis data kuantitatif dan spasial di dunia nyata.</div>
+                                <div class="col-murni"><span class="mobile-col-label">Matematika Murni: </span>Teori abstrak, pembuktian aksiomatis, manipulasi rumus aljabar murni.</div>
+                                <div class="col-numerasi"><span class="mobile-col-label">Literasi Numerasi: </span>Pengambilan keputusan berbasis data kuantitatif dan spasial di dunia nyata.</div>
                             </div>
                             <div class="table-row">
                                 <div class="col-aspek font-bold">Bentuk Soal</div>
-                                <div class="col-murni">"Tentukan nilai x dari persamaan...", "Hitung volume balok jika p=4, l=3, t=2".</div>
-                                <div class="col-numerasi">"Berdasarkan dimensi kotak kemasan dan kapasitas ruang bagasi, tentukan konfigurasi penataan optimal agar seluruh muatan dapat dimuat secara efisien."</div>
+                                <div class="col-murni"><span class="mobile-col-label">Matematika Murni: </span>"Tentukan nilai x dari persamaan...", "Hitung volume balok jika p=4, l=3, t=2".</div>
+                                <div class="col-numerasi"><span class="mobile-col-label">Literasi Numerasi: </span>"Berdasarkan dimensi kotak kemasan dan kapasitas ruang bagasi, tentukan konfigurasi penataan optimal agar seluruh muatan dapat dimuat secara efisien."</div>
                             </div>
                             <div class="table-row">
                                 <div class="col-aspek font-bold">Karakteristik Jawaban</div>
-                                <div class="col-murni">Umumnya memiliki satu solusi formal tunggal.</div>
-                                <div class="col-numerasi">Memungkinkan variasi solusi berdasarkan pertimbangan efisiensi material, optimasi biaya, dan batasan kontekstual nyata.</div>
+                                <div class="col-murni"><span class="mobile-col-label">Matematika Murni: </span>Umumnya memiliki satu solusi formal tunggal.</div>
+                                <div class="col-numerasi"><span class="mobile-col-label">Literasi Numerasi: </span>Memungkinkan variasi solusi berdasarkan pertimbangan efisiensi material, optimasi biaya, dan batasan kontekstual nyata.</div>
                             </div>
                         </div>
                     </div>
@@ -508,7 +538,7 @@
         <!-- HALAMAN BAHAN AJAR (Tersembunyi default)   -->
         <!-- ========================================== -->
         <div id="page-bahan-ajar" class="page-section d-none">
-            <section class="section-container" style="padding-top: 8rem;">
+            <section class="section-container page-top-spacing">
                 
                 <div class="bahan-ajar-header">
                     <div class="header-text">
@@ -620,7 +650,7 @@
         <!-- HALAMAN TIM PENGEMBANG (Tersembunyi)       -->
         <!-- ========================================== -->
         <div id="page-tim" class="page-section d-none">
-            <section class="section-container" style="padding-top: 8rem;">
+            <section class="section-container page-top-spacing">
                 
                 <div class="section-header">
                     <h2>Tim Pengembang</h2>

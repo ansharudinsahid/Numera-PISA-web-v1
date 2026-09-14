@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numera PISA</title>
+    <!-- Font Teachers -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teachers:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Ikon (Phosphor Icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <header id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon"><i class="ph ph-hexagon"></i></div>
+                <span class="logo-text">Numera PISA</span>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#" id="nav-beranda" class="active"><i class="ph ph-compass"></i> Beranda</a>
+                <a href="#" id="nav-materi"><i class="ph ph-book-open"></i> Materi</a>
+                <a href="#" id="nav-bahan-ajar"><i class="ph ph-file-text"></i> Bahan Ajar</a>
+                <a href="#" id="nav-tim"><i class="ph ph-users"></i> Tim Pengembang</a>
+            </nav>
+
+            <button class="btn-primary">
+                <i class="ph ph-cube"></i> Simulator 3D
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========================================== -->
+        <!-- HALAMAN BERANDA -->
+        <!-- ========================================== -->
+        <div id="page-beranda" class="page-section active">
+            
+            <section class="hero-section">
+                <div class="hero-banner">
+                    <div class="hero-content">
+                        <h1>Eksplorasi Literasi Numerasi & Geometri Ruang Berbasis <span class="text-gradient">PISA dan Augmented Reality</span></h1>
+                        <p>Numera PISA menghadirkan terobosan media belajar interaktif untuk menumbuhkan kemampuan bernalar tingkat tinggi (HOTS), penguasaan domain Space and Shape, serta pengalaman spasial 3D imersif melalui WebAR tanpa aplikasi tambahan.</p>
+                        
+                        <div class="hero-buttons">
+                            <div class="hero-buttons-row">
+                                <a href="#" class="btn-hero btn-purple" onclick="document.getElementById('nav-materi').click();">
+                                    <i class="ph ph-book-open"></i> Pelajari Materi Pembelajaran <i class="ph ph-arrow-right"></i>
+                                </a>
+                                <a href="#" class="btn-hero btn-dark" onclick="document.getElementById('nav-bahan-ajar').click();">
+                                    <i class="ph ph-file-text"></i> Akses Bahan Ajar
+                                </a>
+                            </div>
+                            <div class="hero-buttons-row">
+                                <a href="#" class="btn-hero btn-dark">
+                                    <i class="ph ph-cube"></i> Simulasi WebAR 3D
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="simulator-card">
+                            <div class="simulator-icon">
+                                <i class="ph ph-cube"></i>
+                            </div>
+                            <h3>Simulasi Kubus & Polihedron</h3>
+                            <p>Visualisasi 3D interaktif &bull; Analisis jaring-jaring &bull; Proyeksi WebXR</p>
+                            <div class="simulator-link">
+                                <a href="#">Buka Simulator <i class="ph ph-caret-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-container" id="pilar">
+                <div class="section-header center">
+                    <span class="badge">PILAR PEMBELAJARAN</span>
+                    <h2>Tiga Pilar Utama Media Numera PISA</h2>
+                    <p>Dirancang secara komprehensif untuk memfasilitasi pendidik dan peserta didik dalam penguatan literasi numerasi berstandar asesmen internasional.</p>
+                </div>
+
+                <div class="grid-3">
+                    <div class="card cursor-pointer" onclick="document.getElementById('nav-materi').click();">
+                        <div class="card-icon"><i class="ph ph-brain"></i></div>
+                        <span class="card-subtitle">PILAR I</span>
+                        <h3>Konsep PISA & Literasi Numerasi</h3>
+                        <p class="card-desc">Kajian mendalam mengenai kerangka asesmen OECD PISA, domain Space and Shape, 4 konteks masalah dunia nyata, serta tiga proses matematis utama (Formulate, Employ, Interpret).</p>
+                        <ul class="feature-list">
+                            <li><i class="ph-fill ph-check-circle"></i> Siklus pemodelan nalar HOTS</li>
+                            <li><i class="ph-fill ph-check-circle"></i> Deskriptor kemahiran Level 1 - 6</li>
+                        </ul>
+                    </div>
+
+                    <div class="card cursor-pointer">
+                        <div class="card-icon"><i class="ph ph-device-mobile"></i></div>
+                        <span class="card-subtitle">PILAR II</span>
+                        <h3>Media Interaktif WebAR 3D</h3>
+                        <p class="card-desc">Penampil model 3 dimensi langsung di peramban web didukung <code>&lt;model-viewer&gt;</code>. Menyajikan rotasi 360°, inspeksi rusuk tersembunyi, jaring-jaring, dan proyeksi kamera AR.</p>
+                        <ul class="feature-list">
+                            <li><i class="ph-fill ph-check-circle"></i> 6 Model bangun ruang utama</li>
+                            <li><i class="ph-fill ph-check-circle"></i> Proyeksi kamera di atas meja belajar</li>
+                        </ul>
+                    </div>
+
+                    <div class="card cursor-pointer" onclick="document.getElementById('nav-bahan-ajar').click();">
+                        <div class="card-icon"><i class="ph ph-file-pdf"></i></div>
+                        <span class="card-subtitle">PILAR III</span>
+                        <h3>Repositori Bahan Ajar PDF</h3>
+                        <p class="card-desc">Repositori dokumen kurikulum terstruktur mencakup Modul Pembelajaran Geometri, Lembar Latihan Soal Stimulus Kontekstual, serta Pedoman Penilaian dan Rubrik Penskoran Analitis.</p>
+                        <ul class="feature-list">
+                            <li><i class="ph-fill ph-check-circle"></i> Prototipe in-app reader interaktif</li>
+                            <li><i class="ph-fill ph-check-circle"></i> Format unduhan PDF siap cetak</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-container bg-light" id="alur">
+                <div class="section-header flex-between">
+                    <div>
+                        <span class="badge">INSTRUKSI PEDAGOGIS</span>
+                        <h2>Panduan Alur Belajar Peserta Didik</h2>
+                        <p>Empat langkah berjenjang dari pemahaman teoretis hingga pemecahan masalah nyata</p>
+                    </div>
+                    <a href="#" class="link-bold" onclick="document.getElementById('nav-materi').click();">Mulai Langkah 1 <i class="ph ph-caret-right"></i></a>
+                </div>
+
+                <div class="grid-4 mt-4">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h4>Pelajari Teori & Kerangka PISA</h4>
+                        <p>Masuk ke tab <strong>Materi</strong>. Pahami esensi domain Space & Shape, 4 konteks masalah, serta 3 proses pemodelan matematis.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h4>Eksplorasi AR & Bangun Ruang 3D</h4>
+                        <p>Gunakan simulator 3D untuk mengamati bangun ruang secara komprehensif, meneliti relasi unsur geometri, menganalisis struktur jaring-jaring, serta mengaktifkan WebAR pada perangkat seluler.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h4>Telaah Modul Pembelajaran PDF</h4>
+                        <p>Buka menu <strong>Bahan Ajar</strong> untuk menelaah modul pembelajaran secara langsung melalui penampil PDF terintegrasi atau mengunduhnya untuk dipelajari secara mandiri.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h4>Evaluasi Instrumen Soal & Rubrik</h4>
+                        <p>Kerjakan instrumen asesmen kontekstual (Level 1-6), kemudian evaluasi alur penalaran Anda menggunakan Pedoman Kunci Jawaban dan Rubrik Penilaian PISA.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- HALAMAN MATERI (Tersembunyi secara default)-->
+        <!-- ========================================== -->
+        <div id="page-materi" class="page-section d-none">
+            <section class="section-container" style="padding-top: 8rem;">
+                
+                <div class="materi-header">
+                    <h2>Materi Pembelajaran PISA, Numerasi & WebAR</h2>
+                    <p>Kajian komprehensif asesmen internasional PISA, siklus pemodelan literasi numerasi kontekstual, serta simulasi visualisasi spasial tiga dimensi berbasis Augmented Reality.</p>
+                    
+                    <div class="tabs-wrapper">
+                        <span class="tabs-label">PILIH SUB-TOPIK PEMBAHASAN:</span>
+                        <div class="tabs-container">
+                            <button class="tab-btn active" data-target="content-kerangka">
+                                <div class="tab-icon"><i class="ph ph-book-open"></i></div>
+                                <div class="tab-text">
+                                    <div class="tab-title">Kerangka Konseptual PISA</div>
+                                    <div class="tab-subtitle">Kerangka Asesmen & Domain Space and Shape</div>
+                                </div>
+                            </button>
+                            <button class="tab-btn" data-target="content-literasi">
+                                <div class="tab-icon"><i class="ph ph-brain"></i></div>
+                                <div class="tab-text">
+                                    <div class="tab-title">Literasi Numerasi</div>
+                                    <div class="tab-subtitle">3 Proses Matematis & HOTS</div>
+                                </div>
+                            </button>
+                            <button class="tab-btn" data-target="content-ar">
+                                <div class="tab-icon"><i class="ph ph-device-mobile"></i></div>
+                                <div class="tab-text">
+                                    <div class="tab-title">Augmented Reality (AR) & 3D</div>
+                                    <div class="tab-subtitle">Laboratorium WebAR Interaktif</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1. KONTEN KERANGKA KONSEPTUAL PISA -->
+                <div id="content-kerangka" class="tab-content">
+                    <div class="materi-grid">
+                        <div class="materi-card">
+                            <h3>Hakikat & Penyelenggaraan PISA</h3>
+                            <p class="desc">PISA (Programme for International Student Assessment) adalah studi evaluasi komparatif internasional tertua dan paling berpengaruh yang diselenggarakan oleh OECD (Organisation for Economic Co-operation and Development).</p>
+                            <div class="indicator-box">
+                                <div class="indicator-title">KARAKTERISTIK & INDIKATOR UTAMA:</div>
+                                <ul class="indicator-list">
+                                    <li><i class="ph-fill ph-check-circle"></i> Penyelenggara: OECD (Organisation for Economic Co-operation and Development)</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> Sasaran: Peserta didik usia 15 tahun menjelang akhir pendidikan wajib dasar</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> Siklus Pengujian: Diselenggarakan berkala setiap 3 tahun sekali sejak tahun 2000</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> Fokus Literasi: Membaca (Reading), Matematika (Mathematics), dan Sains (Science)</li>
+                                </ul>
+                            </div>
+                            <div class="content-section">
+                                <h4>1. Filosofi Asesmen Abad Ke-21</h4>
+                                <p>Berbeda dengan ujian konvensional yang mengukur pengingatan materi kurikulum secara hafalan, PISA dirancang untuk mengevaluasi kapasitas peserta didik dalam menerapkan pengetahuan dan keterampilan pada konteks kehidupan nyata.</p>
+                                <div class="callout-box">
+                                    <div class="callout-title">Catatan Pedagogis</div>
+                                    <p>PISA bukan tes kecerdasan IQ dan bukan pula tes hafalan rumus mekanis. PISA adalah cermin kesiapan literasi masa depan peserta didik.</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="left-text">Standar Kerangka OECD PISA</span>
+                                <span class="right-text">Terverifikasi Akademik</span>
+                            </div>
+                        </div>
+
+                        <div class="materi-card">
+                            <h3>Urgensi & Refleksi PISA bagi Indonesia</h3>
+                            <p class="desc">Partisipasi Indonesia dalam PISA sejak tahun 2000 memberikan cermin independen yang sangat berharga untuk mengevaluasi efektivitas sistem pendidikan nasional dan mengarahkan reformasi kurikulum menuju penalaran kritis.</p>
+                            <div class="indicator-box">
+                                <div class="indicator-title">KARAKTERISTIK & INDIKATOR UTAMA:</div>
+                                <ul class="indicator-list">
+                                    <li><i class="ph-fill ph-check-circle"></i> Cermin Mutu Nasional: Menyediakan data empiris komparatif dengan lebih dari 80 negara di dunia</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> Pendorong Kurikulum Merdeka & Asesmen Nasional (ANBK): Menggantikan UN yang bersifat hafalan menjadi Asesmen Kompetensi Minimum (AKM)</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> Transformasi Pedagogis: Mendorong guru beralih dari instruksi prosedural rutin ke pembelajaran berbasis masalah (PBL) dan penemuan (Inquiry)</li>
+                                </ul>
+                            </div>
+                            <div class="content-section">
+                                <h4>1. Mengapa Indonesia Konsisten Berpartisipasi?</h4>
+                                <p>Keikutsertaan berkelanjutan Indonesia sejak tahun 2000 membuktikan komitmen bangsa untuk memiliki tolok ukur obyektif berstandar global. Hasil PISA menjadi rujukan strategis dalam penyusunan kebijakan nasional.</p>
+                                <div class="callout-box">
+                                    <div class="callout-title">Transformasi Paradigma Berpikir</div>
+                                    <p>Pembelajaran matematika berorientasi pada pengembangan daya nalar kritis, kemampuan abstraksi spasial, serta perumusan solusi terhadap fenomena kontekstual terstruktur.</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="left-text">Standar Kerangka OECD PISA</span>
+                                <span class="right-text">Terverifikasi Akademik</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="matrix-card">
+                        <div class="matrix-header">
+                            <div class="matrix-icon"><i class="ph ph-compass"></i></div>
+                            <div>
+                                <h3>Matriks 4 Konteks Masalah PISA dalam Geometri Ruang</h3>
+                                <p>Pemetaan stimulus masalah nyata yang sering diujikan pada asesmen internasional</p>
+                            </div>
+                        </div>
+                        <div class="matrix-grid">
+                            <div class="matrix-item">
+                                <div class="matrix-tag">1. KONTEKS PRIBADI (PERSONAL)</div>
+                                <h5>Aktivitas Personal & Domestik</h5>
+                                <p>Penataan perabot ruangan (balok), perancangan konstruksi tenda (prisma segitiga), serta estimasi kapasitas wadah penyimpanan.</p>
+                            </div>
+                            <div class="matrix-item">
+                                <div class="matrix-tag">2. KONTEKS PEKERJAAN (OCCUPATIONAL)</div>
+                                <h5>Industri, Rekayasa & Arsitektur</h5>
+                                <p>Perhitungan struktur atap limas penahan beban angin, efisiensi bahan karton pada industri kemasan, dan efisiensi volume muatan kargo.</p>
+                            </div>
+                            <div class="matrix-item">
+                                <div class="matrix-tag">3. KONTEKS SOSIAL-MASYARAKAT (SOCIETAL)</div>
+                                <h5>Komunitas & Fasilitas Publik</h5>
+                                <p>Pembangunan tandon penampungan air silinder komunal, konstruksi monumen piramida publik, serta perancangan tata ruang kota berpola simetri geometris.</p>
+                            </div>
+                            <div class="matrix-item">
+                                <div class="matrix-tag">4. KONTEKS ILMIAH (SCIENTIFIC)</div>
+                                <h5>Sains, Geofisika & Teknologi Ruang</h5>
+                                <p>Analisis struktur kubah observatorium astronomi, identifikasi bentuk kristal mineral poligonik, serta kalkulasi volume pelampung apung oseanografi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. KONTEN LITERASI NUMERASI -->
+                <div id="content-literasi" class="tab-content d-none">
+                    <div class="literasi-section">
+                        <span class="badge-sub">LANDASAN KONSEPTUAL</span>
+                        <h3>Hakikat Literasi Numerasi vs Matematika Murni</h3>
+                        <p>Literasi numerasi adalah kemampuan, kepercayaan diri, dan kecenderungan seseorang untuk menggunakan pemikiran matematis dalam memenuhi tuntutan kehidupan sehari-hari di masyarakat.</p>
+                        
+                        <div class="comparison-table">
+                            <div class="table-header">
+                                <div class="col-aspek">Aspek Perbandingan</div>
+                                <div class="col-murni">Matematika Murni (Skolastik)</div>
+                                <div class="col-numerasi">Literasi Numerasi (PISA / AKM)</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="col-aspek font-bold">Fokus Utama</div>
+                                <div class="col-murni">Teori abstrak, pembuktian aksiomatis, manipulasi rumus aljabar murni.</div>
+                                <div class="col-numerasi">Pengambilan keputusan berbasis data kuantitatif dan spasial di dunia nyata.</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="col-aspek font-bold">Bentuk Soal</div>
+                                <div class="col-murni">"Tentukan nilai x dari persamaan...", "Hitung volume balok jika p=4, l=3, t=2".</div>
+                                <div class="col-numerasi">"Berdasarkan dimensi kotak kemasan dan kapasitas ruang bagasi, tentukan konfigurasi penataan optimal agar seluruh muatan dapat dimuat secara efisien."</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="col-aspek font-bold">Karakteristik Jawaban</div>
+                                <div class="col-murni">Umumnya memiliki satu solusi formal tunggal.</div>
+                                <div class="col-numerasi">Memungkinkan variasi solusi berdasarkan pertimbangan efisiensi material, optimasi biaya, dan batasan kontekstual nyata.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="literasi-section mt-5" style="border: none; padding-bottom: 0;">
+                        <span class="badge-sub text-purple">THE MATHEMATICAL MODELING CYCLE</span>
+                        <h3>Tiga (3) Proses Matematis Utama dalam PISA</h3>
+                        <p>Alur penalaran peserta didik dalam menyelesaikan permasalahan kontekstual berstandar asesmen internasional</p>
+                        
+                        <div class="grid-3 mt-4">
+                            <div class="process-card">
+                                <div class="process-number">01</div>
+                                <h4>Merumuskan (Formulating)</h4>
+                                <span class="process-subtitle">Dari Dunia Nyata ke Dunia Matematika</span>
+                                <p>Kemampuan mengidentifikasi peluang matematis dalam masalah kontekstual, lalu menerjemahkannya ke dalam bahasa, simbol, diagram, dan model matematika yang relevan.</p>
+                            </div>
+                            
+                            <div class="process-card">
+                                <div class="process-number">02</div>
+                                <h4>Menerapkan (Employing)</h4>
+                                <span class="process-subtitle">Bekerja di Dalam Ranah Matematika</span>
+                                <p>Kemampuan menerapkan konsep, fakta, prosedur komputasi, rumus, dan penalaran matematis untuk memecahkan model yang telah dirumuskan.</p>
+                            </div>
+                            
+                            <div class="process-card">
+                                <div class="process-number">03</div>
+                                <h4>Menafsirkan & Mengevaluasi (Interpreting & Evaluating)</h4>
+                                <span class="process-subtitle">Dari Solusi Matematika Kembali ke Realitas</span>
+                                <p>Kemampuan merefleksikan kembali hasil kalkulasi matematika ke dalam konteks masalah awal, serta menilai apakah solusi tersebut masuk akal dan relevan dengan situasi nyata.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. KONTEN AUGMENTED REALITY (Sembunyikan Bawaan) -->
+                <div id="content-ar" class="tab-content d-none">
+                    
+                    <!-- Banner AR -->
+                    <div class="ar-banner">
+                        <div class="ar-banner-badge">
+                            <i class="ph ph-device-mobile"></i> Peran Edukatif Augmented Reality
+                        </div>
+                        <h3>Menjembatani Representasi 2D ke Intuisi Ruang Nyata 3D</h3>
+                        <p>Keterbatasan gambar statis pada media cetak konvensional kerap menyulitkan peserta didik membedakan rusuk tampak dengan rusuk tersembunyi. Melalui Augmented Reality (WebAR), peserta didik dapat mengamati rotasi objek tiga dimensi dari berbagai sudut pandang, menelaah pembentangan jaring-jaring secara langsung, dan menganalisis bidang diagonal secara intuitif.</p>
+                    </div>
+
+                    <!-- Simulator Container -->
+                    <div class="ar-simulator-section">
+                        <!-- Header Simulator -->
+                        <div class="ar-sim-header">
+                            <div class="ar-sim-title">
+                                <div class="badge-sub text-purple mb-1">
+                                    <i class="ph ph-sparkle"></i> WebAR & 3D Spatial Simulator
+                                </div>
+                                <h3>Laboratorium Virtual Geometri Ruang</h3>
+                                <p>Manipulasi objek 3D secara interaktif dengan kendali rotasi 360&deg;, amati transformasi jaring-jaring, serta proyeksikan langsung ke dunia nyata melalui Augmented Reality (WebAR).</p>
+                            </div>
+                            <div class="ar-sim-actions">
+                                <button class="btn-outline-gray"><i class="ph ph-question"></i> Panduan WebAR</button>
+                                <button class="btn-primary-blue"><i class="ph ph-camera"></i> Luncurkan AR (Kamera)</button>
+                            </div>
+                        </div>
+
+                        <!-- Pilihan Bangun Ruang -->
+                        <div class="ar-shape-selector">
+                            <span class="shape-label">PILIH BANGUN RUANG:</span>
+                            <div class="shape-pills">
+                                <button class="shape-pill active"><i class="ph ph-cube"></i> Kubus</button>
+                                <button class="shape-pill"><i class="ph ph-cube"></i> Balok</button>
+                                <button class="shape-pill"><i class="ph ph-cube"></i> Prisma</button>
+                                <button class="shape-pill"><i class="ph ph-cube"></i> Limas</button>
+                                <button class="shape-pill"><i class="ph ph-cylinder"></i> Tabung</button>
+                                <button class="shape-pill"><i class="ph ph-cone"></i> Kerucut</button>
+                            </div>
+                        </div>
+
+                        <!-- Ruang Kerja Utama (Grid 2 Kolom) -->
+                        <div class="ar-workspace">
+                            
+                            <!-- Bagian Kiri: Stage 3D -->
+                            <div class="ar-stage">
+                                <div class="stage-header">
+                                    <div class="stage-info">
+                                        <span class="dot-green"></span> Kubus (Hexahedron) <span class="divider">|</span> <span class="category-text">Bangun Ruang Sisi Datar</span>
+                                    </div>
+                                    <div class="stage-toggles">
+                                        <button class="active">Padat</button>
+                                        <button>Rangka</button>
+                                        <button>Jaring</button>
+                                    </div>
+                                </div>
+
+                                <div class="stage-canvas">
+                                    <!-- Ilustrasi SVG Placeholder Kubus 3D -->
+                                    <svg viewBox="0 0 200 200" class="cube-svg">
+                                        <polygon points="100,30 160,65 100,100 40,65" fill="#6366f1" stroke="#818cf8" stroke-width="1.5" opacity="0.9"/>
+                                        <polygon points="40,65 100,100 100,170 40,135" fill="#4338ca" stroke="#6366f1" stroke-width="1.5" opacity="0.85"/>
+                                        <polygon points="100,100 160,65 160,135 100,170" fill="#3730a3" stroke="#4f46e5" stroke-width="1.5" opacity="0.95"/>
+                                        <circle cx="100" cy="30" r="3" fill="#38bdf8"/>
+                                        <circle cx="160" cy="65" r="3" fill="#38bdf8"/>
+                                        <circle cx="100" cy="100" r="3" fill="#38bdf8"/>
+                                        <circle cx="40" cy="65" r="3" fill="#38bdf8"/>
+                                        <circle cx="40" cy="135" r="3" fill="#38bdf8"/>
+                                        <circle cx="100" cy="170" r="3" fill="#38bdf8"/>
+                                        <circle cx="160" cy="135" r="3" fill="#38bdf8"/>
+                                    </svg>
+                                </div>
+
+                                <div class="stage-instruction">
+                                    <span><i class="ph ph-arrows-clockwise"></i> Klik & geser untuk rotasi 360&deg; | Scroll untuk perbesar</span>
+                                </div>
+
+                                <div class="stage-footer">
+                                    <div class="footer-left">
+                                        <button class="btn-dark-active"><i class="ph ph-arrows-clockwise"></i> Auto-Putar: Aktif</button>
+                                        <button class="btn-dark-outline">Reset Posisi</button>
+                                    </div>
+                                    <div class="footer-right">
+                                        <div class="zoom-control">
+                                            <button><i class="ph ph-minus"></i></button>
+                                            <span>100%</span>
+                                            <button><i class="ph ph-plus"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bagian Kanan: Informasi & Anatomi -->
+                            <div class="ar-details">
+                                
+                                <!-- Card Anatomi Geometris -->
+                                <div class="detail-card">
+                                    <div class="detail-header-flex">
+                                        <div>
+                                            <h4>Anatomi Geometris</h4>
+                                            <p>Karakteristik rusuk, titik sudut, dan formula</p>
+                                        </div>
+                                        <span class="badge-euler"><i class="ph ph-check-circle"></i> Euler: F+V-E=2</span>
+                                    </div>
+                                    
+                                    <div class="metrics-grid">
+                                        <div class="metric-box"><span>Titik Sudut (V)</span><strong>8</strong></div>
+                                        <div class="metric-box"><span>Rusuk (E)</span><strong>12</strong></div>
+                                        <div class="metric-box"><span>Sisi / Muka (F)</span><strong>6</strong></div>
+                                    </div>
+
+                                    <div class="formula-box">
+                                        <h5 class="formula-title"><i class="ph ph-stack"></i> RUMUS MATEMATIKA UTAMA:</h5>
+                                        <div class="formula-row"><span>Volume:</span><strong class="text-blue">V = s&sup3;</strong></div>
+                                        <div class="formula-row"><span>Luas Permukaan:</span><strong class="text-blue">L = 6 x s&sup2;</strong></div>
+                                        <ul class="formula-list">
+                                            <li>&bull; Diagonal Bidang: d_b = s&radic;2</li>
+                                            <li>&bull; Diagonal Ruang: d_r = s&radic;3</li>
+                                            <li>&bull; Luas Bidang Diagonal: L_bd = s&sup2;&radic;2</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="components-box">
+                                        <h5>Rincian Komponen:</h5>
+                                        <ul class="component-list">
+                                            <li><span class="dot-purple"></span><strong>Titik Sudut (8):</strong> Titik potong pertemuan 3 rusuk (A, B, C, D, E, F, G, H)</li>
+                                            <li><span class="dot-purple"></span><strong>Rusuk (12):</strong> Garis batas pertemuan 2 sisi berhadapan, seluruhnya sama panjang</li>
+                                            <li><span class="dot-purple"></span><strong>Sisi Bidang (6):</strong> Bidang persegi kongruen (alas, tutup, 4 sisi tegak)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Card Konteks PISA -->
+                                <div class="detail-card">
+                                    <div class="detail-header-flex">
+                                        <span class="badge-pisa-pekerjaan">KONTEKS PISA: PEKERJAAN</span>
+                                        <span class="pisa-level">PISA Level 3</span>
+                                    </div>
+                                    <h4 class="pisa-title">Kemasan Kubus Souvenir Ramah Lingkungan</h4>
+                                    <div class="pisa-problem">
+                                        Sebuah workshop kerajinan memproduksi kotak kado berbentuk kubus dengan panjang rusuk 12 cm. Jika setiap kotak membutuhkan tambahan 15% bahan karton untuk lipatan lem dan penutup, berapakah luas minimal karton yang dibutuhkan untuk 100 buah kotak?
+                                    </div>
+                                    
+                                    <div class="pisa-steps">
+                                        <h5>Langkah Pemecahan Numerasi:</h5>
+                                        <ol>
+                                            <li>1. Merumuskan (Formulate): Luas permukaan 1 kotak kubus L = 6 x s&sup2; = 6 x (12)&sup2; = 6 x 144 = 864 cm&sup2;.</li>
+                                            <li>2. Menerapkan (Employ): Tambahan lem dan lipatan 15% = 1.15 x 864 cm&sup2; = 993.6 cm&sup2; per kotak. Untuk 100 kotak = 100 x 993.6 = 99,360 cm&sup2; (atau 9.936 m&sup2;).</li>
+                                            <li>3. Menafsirkan (Interpret): Pengrajin harus membeli minimal 10 m&sup2; lembaran karton agar produksi tidak kekurangan bahan akibat potongan limbah.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- HALAMAN BAHAN AJAR (Tersembunyi default)   -->
+        <!-- ========================================== -->
+        <div id="page-bahan-ajar" class="page-section d-none">
+            <section class="section-container" style="padding-top: 8rem;">
+                
+                <div class="bahan-ajar-header">
+                    <div class="header-text">
+                        <h2>Repositori Bahan Ajar Digital</h2>
+                        <p>Seluruh dokumen pembelajaran disusun secara terstandarisasi. Pengguna dapat menelaah dokumen secara langsung melalui penampil interaktif atau mengunduhnya ke perangkat untuk pembelajaran mandiri.</p>
+                    </div>
+                    <div class="search-box">
+                        <i class="ph ph-magnifying-glass search-icon"></i>
+                        <input type="text" placeholder="Cari modul atau instrumen soal...">
+                    </div>
+                </div>
+
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-content">
+                            <span class="resource-tag">MODUL PEMBELAJARAN</span>
+                            <h3>Buku / Modul Pembelajaran Geometri Ruang PISA</h3>
+                            <p>Buku modul ajar terstruktur yang memadukan capaian pembelajaran kurikulum nasional dengan kerangka domain Space & Shape PISA. Memuat petunjuk belajar, eksplorasi AR, dan penanaman konsep bangun ruang.</p>
+                            
+                            <div class="topics-section">
+                                <span class="topics-title">CAKUPAN BAHASAN:</span>
+                                <div class="topics-list">
+                                    <span class="topic-item">Kerangka Domain Space & Shape</span>
+                                    <span class="topic-item">Bangun Ruang Sisi Datar & Lengkung</span>
+                                    <span class="topic-item">Protokol Eksplorasi AR</span>
+                                    <span class="topic-item">Studi Kasus Kontekstual</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 1: Modul -->
+                        <div class="resource-actions">
+                            <button class="btn-resource-primary btn-modul btn-open-pdf" data-title="Buku / Modul Pembelajaran Geometri Ruang PISA">
+                                <i class="ph ph-book-open"></i> Baca Modul (Pratinjau)
+                            </button>
+                            <a href="/public/soalpisadanjawaban.pdf" download class="btn-resource-secondary">
+                                <i class="ph ph-download-simple"></i> Unduh PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-content">
+                            <span class="resource-tag">LEMBAR LATIHAN SOAL</span>
+                            <h3>Lembar Soal Latihan Geometri PISA (Kompilasi Stimulus)</h3>
+                            <p>Kumpulan instrumen soal stimulus kontekstual berstandar PISA level kemahiran 1 sampai 6. Dilengkapi stimulus grafis arsitektur, perhitungan material, dan efisiensi volume.</p>
+                            
+                            <div class="topics-section">
+                                <span class="topics-title">CAKUPAN BAHASAN:</span>
+                                <div class="topics-list">
+                                    <span class="topic-item">Stimulus Arsitektur Kubah & Piramida</span>
+                                    <span class="topic-item">Kargo Pengiriman & Logistik Kontainer</span>
+                                    <span class="topic-item">Konteks Sosial & Lingkungan Hidup</span>
+                                    <span class="topic-item">Soal Level HOTS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2: Modul -->
+                        <div class="resource-actions">
+                            <button class="btn-resource-primary btn-modul btn-open-pdf" data-title="Buku / Modul Pembelajaran Geometri Ruang PISA">
+                                <i class="ph ph-book-open"></i> Baca Modul (Pratinjau)
+                            </button>
+                            <a href="/public/soalpisadanjawaban.pdf" download class="btn-resource-secondary">
+                                <i class="ph ph-download-simple"></i> Unduh PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-content">
+                            <span class="resource-tag">KUNCI JAWABAN & RUBRIK</span>
+                            <h3>Kunci Jawaban & Rubrik Pembahasan Soal PISA</h3>
+                            <p>Panduan evaluasi lengkap mencakup langkah matematis sistematis (Formulate, Employ, Interpret), pedoman penskoran analitis (Full Credit, Partial Credit, No Credit), dan pemetaan level kompetensi.</p>
+                            
+                            <div class="topics-section">
+                                <span class="topics-title">CAKUPAN BAHASAN:</span>
+                                <div class="topics-list">
+                                    <span class="topic-item">Analisis 3 Proses Matematis PISA</span>
+                                    <span class="topic-item">Rubrik Penskoran Analitis (Skor 0-2)</span>
+                                    <span class="topic-item">Pembuktian Teorema Geometri</span>
+                                    <span class="topic-item">Umpan Balik Diagnostik Peserta Didik</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2: Modul -->
+                        <div class="resource-actions">
+                            <button class="btn-resource-primary btn-modul btn-open-pdf" data-title="Buku / Modul Pembelajaran Geometri Ruang PISA">
+                                <i class="ph ph-book-open"></i> Baca Modul (Pratinjau)
+                            </button>
+                            <a href="/public/soalpisadanjawaban.pdf" download class="btn-resource-secondary">
+                                <i class="ph ph-download-simple"></i> Unduh PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="instruction-box">
+                    <div class="instruction-icon">
+                        <i class="ph ph-book-open"></i>
+                    </div>
+                    <div class="instruction-text">
+                        <h4>Petunjuk Pembelajaran Mandiri:</h4>
+                        <p>Peserta didik disarankan menyelesaikan instrumen pada lembar soal latihan secara mandiri sebelum menelaah pedoman penilaian. Fokus evaluasi terletak pada ketepatan alur pemodelan matematis (<em>Formulating, Employing, Interpreting</em>), bukan sekadar nilai komputasi akhir.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- HALAMAN TIM PENGEMBANG (Tersembunyi)       -->
+        <!-- ========================================== -->
+        <div id="page-tim" class="page-section d-none">
+            <section class="section-container" style="padding-top: 8rem;">
+                
+                <div class="section-header">
+                    <h2>Tim Pengembang</h2>
+                    <p>Dosen pembimbing dan pengembang media pembelajaran Numera PISA.</p>
+                </div>
+
+                <div class="grid-3">
+                    
+                    <div class="team-card">
+                        <div class="team-avatar">PD</div>
+                        <h3>Prof. Dr. Irwan Supriyadi, M.Pd.</h3>
+                        <div class="team-role">Dosen Pembimbing I / Ahli Media Pembelajaran Digital</div>
+                        
+                        <div class="team-dept">
+                            <i class="ph ph-graduation-cap"></i>
+                            <div>
+                                <strong>Departemen Pendidikan Matematika</strong><br>
+                                Fakultas Pendidikan Matematika dan Ilmu Pengetahuan Alam (FPMIPA), Universitas Pendidikan Indonesia / Universitas Negeri
+                            </div>
+                        </div>
+
+                        <p class="team-bio">Pakar teknologi pendidikan dan perancangan media instruksional digital. Berpengalaman lebih dari 20 tahun dalam riset integrasi teknologi imersif (VR/AR) untuk meningkatkan penalaran spasial dan pemahaman konseptual peserta didik.</p>
+
+                        <div class="focus-section">
+                            <div class="focus-title">FOKUS KEPAKARAN & RISET:</div>
+                            <div class="focus-tags">
+                                <span class="focus-tag">Desain Multimedia Pembelajaran Interaktif</span>
+                                <span class="focus-tag">Augmented Reality (AR) dalam Pendidikan Sains & Matematika</span>
+                                <span class="focus-tag">Pengembangan Kurikulum Berbasis Teknologi Digital</span>
+                            </div>
+                        </div>
+
+                        <div class="team-contact">
+                            <a href="#"><i class="ph ph-envelope-simple"></i> irwan.supriyadi@upi.edu</a>
+                            <a href="#" class="scholar-link">
+                                <span><i class="ph ph-book-bookmark"></i> Profil Google Scholar</span> 
+                                <i class="ph ph-arrow-square-out"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar">DN</div>
+                        <h3>Dr. Nurul Azizah Maulida, M.Si.</h3>
+                        <div class="team-role">Dosen Pembimbing II / Ahli Asesmen PISA & Penalaran Spasial</div>
+                        
+                        <div class="team-dept">
+                            <i class="ph ph-graduation-cap"></i>
+                            <div>
+                                <strong>Program Studi Pendidikan Matematika</strong><br>
+                                Fakultas Keguruan dan Ilmu Pendidikan (FKIP), Universitas Pendidikan Indonesia / Universitas Negeri
+                            </div>
+                        </div>
+
+                        <p class="team-bio">Peneliti dan konsultan asesmen literasi numerasi nasional. Berfokus pada evaluasi kemampuan berpikir tingkat tinggi, transformasi soal kontekstual berstandar PISA (Space & Shape), dan scaffolding didaktis guru matematika.</p>
+
+                        <div class="focus-section">
+                            <div class="focus-title">FOKUS KEPAKARAN & RISET:</div>
+                            <div class="focus-tags">
+                                <span class="focus-tag">Kerangka Asesmen Literasi Matematika OECD PISA</span>
+                                <span class="focus-tag">Realistic Mathematics Education (RME / PMRI)</span>
+                                <span class="focus-tag">Higher Order Thinking Skills (HOTS) & Numerasi</span>
+                            </div>
+                        </div>
+
+                        <div class="team-contact">
+                            <a href="#"><i class="ph ph-envelope-simple"></i> nurul.azizah@upi.edu</a>
+                            <a href="#" class="scholar-link">
+                                <span><i class="ph ph-book-bookmark"></i> Profil Google Scholar</span> 
+                                <i class="ph ph-arrow-square-out"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar">FA</div>
+                        <h3>Fikri Aditya Pratama, S.Pd.</h3>
+                        <div class="team-role">Pengembang Sistem Web, Desainer Model AR 3D & Penulis Modul</div>
+                        
+                        <div class="team-dept">
+                            <i class="ph ph-graduation-cap"></i>
+                            <div>
+                                <strong>Program Studi Magister Pendidikan Matematika</strong><br>
+                                Fakultas Pendidikan Matematika dan Ilmu Pengetahuan Alam, Universitas Pendidikan Indonesia / Universitas Negeri
+                            </div>
+                        </div>
+
+                        <p class="team-bio">Pendidik dan pengembang sistem perangkat lunak yang berdedikasi dalam menciptakan media pembelajaran interaktif berkualitas tinggi, berkecepatan optimal, dan dapat diakses secara inklusif oleh peserta didik di Indonesia.</p>
+
+                        <div class="focus-section">
+                            <div class="focus-title">FOKUS KEPAKARAN & RISET:</div>
+                            <div class="focus-tags">
+                                <span class="focus-tag">Frontend Web Development & Dynamic View Routing</span>
+                                <span class="focus-tag">3D Geometric Modeling & WebXR / Google Model-Viewer</span>
+                                <span class="focus-tag">Instruksional Desain Berbasis Literasi Numerasi</span>
+                            </div>
+                        </div>
+
+                        <div class="team-contact">
+                            <a href="#"><i class="ph ph-envelope-simple"></i> fikri.aditya.edu@gmail.com</a>
+                            <a href="#" class="scholar-link">
+                                <span><i class="ph ph-book-bookmark"></i> Profil Google Scholar</span> 
+                                <i class="ph ph-arrow-square-out"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- MODAL PDF VIEWER                           -->
+        <!-- ========================================== -->
+        <div id="pdf-modal" class="pdf-modal-overlay d-none">
+            <div class="pdf-modal-container">
+                <!-- Header Modal -->
+                <div class="pdf-modal-header">
+                    <div class="pdf-modal-title">
+                        <i class="ph ph-file-text"></i>
+                        <h3 id="pdf-modal-title-text">Buku / Modul Pembelajaran Geometri Ruang PISA</h3>
+                    </div>
+                    
+                    <div class="pdf-modal-actions">
+                        <button class="btn-close-modal" id="btn-close-pdf"><i class="ph ph-x"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Body Modal (Penampil File PDF Native) -->
+                <div class="pdf-modal-body">
+                    <!-- Ini akan memuat file PDF asli Anda dari folder public -->
+                    <iframe src="/public/soalpisadanjawaban.pdf" width="100%" height="100%" frameborder="0" title="Penampil PDF Numera"></iframe>
+                </div>
+
+                <!-- Footer Modal -->
+                <div class="pdf-modal-footer">
+                    <span>Gunakan fitur *scroll* untuk berpindah halaman pada dokumen.</span>
+                    <button class="btn-dark-outline" id="btn-close-pdf-footer">Tutup Pratinjau</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo footer-logo">
+                    <div class="logo-icon"><i class="ph ph-hexagon"></i></div>
+                    <span class="logo-text">Numera PISA</span>
+                </div>
+                <p>Web Platform Media Pembelajaran Matematika Berbasis Literasi Numerasi, Asesmen OECD PISA (Domain Space and Shape), dan Visualisasi Augmented Reality (AR) Geometri Ruang.</p>
+                <p class="footer-subtext">Didukung Google Model-Viewer & WebXR • Tipografi Google Teachers</p>
+                <div class="copyright-text" style="margin-top: 2rem;">© 2026 <strong>Numera PISA</strong>. Hak Cipta Dilindungi. Media Riset & Pendidikan Matematika.</div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>MENU PEMBELAJARAN</h4>
+                <ul>
+                    <li><a href="#" onclick="document.getElementById('nav-beranda').click();">Beranda</a></li>
+                    <li><a href="#" onclick="document.getElementById('nav-materi').click();">Materi & Kerangka Konseptual</a></li>
+                    <li><a href="#" onclick="document.getElementById('nav-bahan-ajar').click();">Bahan Ajar & Instrumen Asesmen</a></li>
+                    <li><a href="#" onclick="document.getElementById('nav-tim').click();">Tim Pengembang & Pembimbing</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-info">
+                <h4>STANDAR & KERANGKA ACUAN</h4>
+                <p>Mengacu pada <em>OECD PISA Mathematics Framework</em>, Asesmen Kompetensi Minimum (AKM) Kemendikbudristek RI, dan Standar Mutu Media Pembelajaran Interaktif.</p>
+                <div class="lab-badge">
+                    <i class="ph ph-graduation-cap"></i> Laboratorium Inovasi Media Pembelajaran Matematika
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-info" style="max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: flex-end; font-size: 0.75rem; opacity: 0.7;">
+            Transisi Tampilan Instan (0 ms) &nbsp;&bull;&nbsp; Client-side Dynamic Routing
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

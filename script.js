@@ -428,7 +428,7 @@ const arData = {
             `
     },
     'candi-apit': {
-        src: './public/candi_apit.glb',
+        src: './public/candiapit.glb',
         title: 'Candi Apit (Prambanan)',
         subtitle: 'Arsitektur Candi Hindu',
         desc: 'Candi Apit merupakan bangunan pendamping di kompleks Candi Prambanan (Jawa Tengah/DIY) yang mengapit pelataran utama. Berbeda dengan candi di Jambi yang berbata merah, Candi Apit terbuat dari batu andesit dengan struktur ramping yang menjulang.',
